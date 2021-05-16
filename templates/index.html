@@ -154,12 +154,13 @@
                     let divColOne = document.createElement("div");
                     divColOne.className = "col";
                     let buttonYes = document.createElement("button");
+                    let buttonNo = document.createElement("button");
                     buttonYes.type = "button";
                     buttonYes.className = "btn btn-light w-100";
-                    buttonYes.setAttribute("href","#carouselExampleControls");
-                    buttonYes.setAttribute("role","button");
-                    buttonYes.setAttribute("data-slide","next");
-                    buttonYes.setAttribute("id","yes");
+                    buttonYes.setAttribute("href", "#carouselExampleControls");
+                    buttonYes.setAttribute("role", "button");
+                    //buttonYes.setAttribute("data-slide","next");
+                    buttonYes.setAttribute("id", "yes");
                     buttonYes.innerText = questionObject.right;
                     //TODO: Assign onclick event handler
                     buttonYes.addEventListener("click", function () {
@@ -172,7 +173,6 @@
                     divRow.appendChild(divColOne);
                     let divColTwo = document.createElement("div");
                     divColTwo.className = "col";
-                    let buttonNo = document.createElement("button");
                     buttonNo.type = "button";
                     buttonNo.className = "btn btn-light w-100";
                     buttonNo.setAttribute("href", "#carouselExampleControls");
@@ -225,7 +225,11 @@
                 result.className = "text-center";
                 result.setAttribute("id", "result");
                 result.hidden = true;
+                let lawEnd = document.createElement("h3");
+                lawEnd.className = "text-center";
+                lawEnd.setAttribute("id", "lawEnd");
                 endCarousel.append(result)
+                endCarousel.append(lawEnd)
                 start.appendChild(endCarousel);
             }
         })
@@ -248,7 +252,9 @@
                 document.getElementById("result").hidden = false;
                 document.getElementById("law"+index).innerText = result.law
                 document.getElementById("next"+index).disabled = false;
+                document.getElementById("lawEnd").innerText = result.law;
             } else {
+                document.getElementById("lawEnd").hidden = true;
                 document.getElementById("result").innerText = result.law;
                 document.getElementById("result").hidden = false;
                 $('#carouselExampleControls div').removeClass('active');
@@ -268,6 +274,17 @@
 
 </body>
 
+<!-- Footer -->
+<footer class="page-footer bg-light font-small">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="{{ url_for('view_impressum') }}">LegalRefund</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

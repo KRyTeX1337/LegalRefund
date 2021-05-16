@@ -17,12 +17,32 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/features")
+def view_features():
+    return render_template("features.html", title="Features")
+
+
+@app.route("/pricing")
+def view_pricing():
+    return render_template("pricing.html", title="Pricing")
+
+
+@app.route("/agb")
+def view_agb():
+    return render_template("agb.html", title="AGB")
+
+
+@app.route("/impressum")
+def view_impressum():
+    return render_template("impressum.html", title="Impressum")
+
+
 @app.route("/getAnswer")
 def get_bot_response():
     #userInput = request.args.get('msg')
     #return str(main.get_response(userInput))
     answers = main.formatRequest(request.args.get('msg'))
-    return str(main.get_response(answers))
+    return json.dumps(main.get_response(answers))
 
 @app.route("/getQuestions")
 def get_questions():
