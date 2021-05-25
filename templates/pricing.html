@@ -26,6 +26,12 @@
                     <a class="nav-link" href="{{ url_for('view_features') }}">Features</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_fragebogen') }}">Fragebogen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_formular') }}">Formular</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('view_pricing') }}">Pricing</a>
                 </li>
                 <li class="nav-item">
@@ -68,7 +74,7 @@
                 <div class="card-body">
                     <h2 class="card-title pricing-card-title">Preis auf Anfrage</h2>
                     <ul class="list-unstyled mt-3 mb-4">
-                        <li>Sie können unser in-house entwickeltes Expert System, in Ihrem eigenem Unternehmen/Web Shop
+                        <li>Sie können unser Expert System in Ihrem eigenem Unternehmen/Web Shop
                             benutzen
                             um Ihren Kunden eine gute Erstberatung anzubieten. Dabei können Sie das Expert System
                             individuell anpassen.
@@ -128,8 +134,9 @@
                                             data-error="Geben Sie Ihre Nachricht ein!"></textarea></div>
                                 </div>
                                 <div id="success" class="col-md-12"><input type="sumbit"
-                                                              class="btn btn-success btn-send pt-2 btn-block "
-                                                              value="Nachricht absenden" onclick=window.location.reload();></div>
+                                                                           class="btn btn-success btn-send pt-2 btn-block "
+                                                                           value="Nachricht absenden"
+                                                                           onclick=window.location.reload();></div>
                             </div>
                         </div>
                     </form>

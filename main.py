@@ -5,7 +5,7 @@ class Result(Fact):
     resultValue = Field(bool)
 
 
-class ShoppingBuddy(KnowledgeEngine):
+class LegalRefund(KnowledgeEngine):
     """
     @DefFacts()
     def startup(self):
@@ -73,37 +73,44 @@ class ShoppingBuddy(KnowledgeEngine):
         self.declare(Result(resultValue=True, law=""))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="true"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="true"),
           salience=5)
     def frage5true(self):
         self.declare(Result(resultValue=True, law=""))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="false"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="false"),
           salience=5)
     def frage5false(self):
-        self.declare(Result(resultValue=True, law="Sie wurden nicht (rechtzeitig) über das Rücktrittsrecht belehrt, daher verlängert sich die Rücktrittsfrist um 12 Monate gem §12 Abs 1 FAGG. Erteilt der/die Unternehmer *in die Informationen verspätet, aber innerhalb der 12 Monatsfrist, so endet die Rücktrittsfrist binnen 14 Tagen (die Frist beginnt am Tag, an dem der verbraucher dieser Information erhalten hat)."))
+        self.declare(Result(resultValue=True,
+                            law="Sie wurden nicht (rechtzeitig) über das Rücktrittsrecht belehrt, daher verlängert sich die Rücktrittsfrist um 12 Monate gem §12 Abs 1 FAGG. Erteilt der/die Unternehmer *in die Informationen verspätet, aber innerhalb der 12 Monatsfrist, so endet die Rücktrittsfrist binnen 14 Tagen (die Frist beginnt am Tag, an dem der verbraucher dieser Information erhalten hat)."))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="false"), Fact(frage6="true"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="false"), Fact(frage6="true"),
           salience=6)
     def frage6true(self):
         self.declare(Result(resultValue=True, law=""))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="false"), Fact(frage6="false"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="false"), Fact(frage6="false"),
           salience=6)
     def frage6false(self):
         self.declare(Result(resultValue=True, law=""))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="false"), Fact(frage6="false"), Fact(frage7="true"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="false"), Fact(frage6="false"), Fact(frage7="true"),
           salience=7)
     def frage7true(self):
         self.declare(Result(resultValue=True, law=""))
         self.halt()
 
-    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"), Fact(frage5="false"), Fact(frage6="false"), Fact(frage7="false"),
+    @Rule(Fact(frage0="true"), Fact(frage1="true"), Fact(frage2="true"), Fact(frage3="true"), Fact(frage4="false"),
+          Fact(frage5="false"), Fact(frage6="false"), Fact(frage7="false"),
           salience=7)
     def frage7false(self):
         self.declare(Result(resultValue=True, law=""))
@@ -118,7 +125,7 @@ class ShoppingBuddy(KnowledgeEngine):
 
 
 """
-engine = ShoppingBuddy()
+engine = LegalRefund()
 engine.reset()
 engine.declare(Fact(vertrag=False), Fact(entgeld=False), Fact(bla=True))
 engine.run()
@@ -133,7 +140,7 @@ else:
 
 def get_response(answers):
     decision = False
-    engine = ShoppingBuddy()
+    engine = LegalRefund()
     engine.reset()
     for i in range(len(answers)):
         engine.declare(Fact(**{'frage' + str(i): answers[i]}))

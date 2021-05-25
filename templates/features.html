@@ -12,7 +12,7 @@
 </head>
 <body>
 <section class="msger">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('home') }}">
             <img src="/static/img/logo.png" alt="" width="250" height="55">
         </a>
@@ -24,6 +24,12 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('view_features') }}">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_fragebogen') }}">Fragebogen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_formular') }}">Formular</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('view_pricing') }}">Pricing</a>
@@ -38,15 +44,18 @@
         </div>
     </nav>
 </section>
-        <img class="img-fluid" src="/static/img/feature.png">
+<img class="img-fluid" src="/static/img/feature.png">
 <div class="content container">
-        <br>
+    <br>
 
     <h1>Unsere Features:</h1>
     <br>
-    <p>LegalTech prüft das Bestehen des Rücktrittsrechts beim Online-Warenkauf im Internet gem §11 FAGG. Dafür müssen bestimmte Voraussetzungen vorliegen.
+    <p>LegalTech prüft das Bestehen des Rücktrittsrechts beim Online-Warenkauf im Internet gem §11 FAGG. Dafür müssen
+        bestimmte Voraussetzungen vorliegen.
         <br>
-        Unser Bot fragt die einzelnen Voraussetzungen ab. Die Voraussetzungen des Gesetzes: Prüfung des Geltungsbereich des Gesetzes - Fragen nach der Rücktrittsfrist und ihrem Verstreichen - Fragen nach möglichen Ausnahmen vom Rücktrittsrecht</p>
+        Unser Bot fragt die einzelnen Voraussetzungen ab. Die Voraussetzungen des Gesetzes: Prüfung des Geltungsbereich
+        des Gesetzes - Fragen nach der Rücktrittsfrist und ihrem Verstreichen - Fragen nach möglichen Ausnahmen vom
+        Rücktrittsrecht</p>
     <br>
     <object data="/static/pdf/tree.pdf" style="width:100%;height:800px">
         <a href="/static/pdf/tree.pdf">PDF laden</a>
@@ -58,11 +67,11 @@
 <!-- Footer -->
 <footer class="page-footer bg-light font-small">
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-    <a href="{{ url_for('view_impressum') }}">LegalRefund</a>
-  </div>
-  <!-- Copyright -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <a href="{{ url_for('view_impressum') }}">LegalRefund</a>
+    </div>
+    <!-- Copyright -->
 
 </footer>
 <!-- Footer -->
