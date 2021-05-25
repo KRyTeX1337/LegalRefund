@@ -161,32 +161,59 @@
                     })
                     nextButton.setAttribute("id", "next" + index)
                     nextButton.innerText = "Weiter"
-                    nextButton.disabled = true
+                    nextButton.disabled = false
                     divCarousel.appendChild(nextButton)
                     start.appendChild(divCarousel);
                 });
                 let endCarousel = document.createElement("div");
                 endCarousel.className = "carousel-item";
                 endCarousel.setAttribute("id", "end");
-                /*
-                let buttonEnd = document.createElement("button");
-                buttonEnd.className = "btn btn-primary w-100";
-                buttonEnd.innerText = "Ergebnis anfordern"
-                buttonEnd.addEventListener("click", function()
-                {
-                    sendAnswers()
-                },false);
-                endCarousel.appendChild(buttonEnd);
-                */
+
                 let result = document.createElement("h3");
                 result.className = "text-center";
                 result.setAttribute("id", "result");
                 result.hidden = true;
+
                 let lawEnd = document.createElement("h3");
                 lawEnd.className = "text-center";
                 lawEnd.setAttribute("id", "lawEnd");
+
+                let lawyers = document.createElement("p");
+                lawyers.innerHTML = (`
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card p-3 w-100">
+        <div class="d-flex align-items-center">
+            <div class="img-fluid"> <img src="https://d5t4h5a9.rocketcdn.me/wp-content/uploads/2021/02/Website-Photo-7.jpg" class="rounded" width="155"> </div>
+            <div class="ml-3 w-100">
+                <h4 class="mb-0 mt-0">Max Mustermann</h4> <span>Konsumentenschutz</span></br>
+                <small>Die Spezialisierung von Max Mustermann liegt in den Verbraucherrechten beim Fernabsatzgeschäft.
+                <br><b>E-Mail: </b><a style="color: slategrey" href="mailto:max.mustermann@kanzlei.com">max.mustermann@kanzlei.com</a>
+                <br><b>Telefonnummer: </b> <a style="color: slategrey" href="+436601234567">+43 660 1234 567</a></small>
+                <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn btn-outline-dark w-100">Webseite</button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card p-3 w-100">
+        <div class="d-flex align-items-center">
+            <div class="img-fluid"> <img src="https://images.squarespace-cdn.com/content/v1/5ddeea00b228c462c5d33f10/1619880888611-IDW7WQYGADLMGZUUNRTS/ke17ZwdGBToddI8pDm48kEEXJqT6UZzo6_T_IEtk8lR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1Ua7GyuyleZfZLbh1TL99aL4EVZ3HdY4X3R4vaGMghUvwBPQhVEbTV4SmYd07HZaZ-g/Catherine+1X1.JPG" class="rounded" width="155"> </div>
+            <div class="ml-3 w-100">
+                <h4 class="mb-0 mt-0">Erika Musterfrau</h4> <span>Konsumentenschutz</span></br>
+                <small>Erika Musterfrau hat jahrelange Erfahrung bei Verbraucherrechten im Fernabsatzgeschäft.
+                <br><b>E-Mail: </b><a style="color: slategrey" href="mailto:erika.musterfrau@kanzlei.com">erika.musterfrau@kanzlei.com</a>
+                <br><b>Telefonnummer: </b> <a style="color: slategrey" href="+436601234567">+43 660 4321 765</a></small>
+                <div class="button mt-2 d-flex flex-row align-items-center"> <button class="btn btn-sm btn btn-outline-dark w-100">Webseite</button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+`);
+
                 endCarousel.append(result)
                 endCarousel.append(lawEnd)
+                endCarousel.append(lawyers)
                 start.appendChild(endCarousel);
             }
         })
@@ -210,10 +237,12 @@
                 document.getElementById("law" + index).innerText = result.law
                 document.getElementById("next" + index).disabled = false;
                 document.getElementById("lawEnd").innerText = result.law;
+
             } else {
                 document.getElementById("lawEnd").hidden = true;
                 document.getElementById("result").innerText = result.law;
                 document.getElementById("result").hidden = false;
+
                 $('#carouselExampleControls div').removeClass('active');
                 $('#carouselExampleControls div:last-child').addClass('active');
                 let myCarousel = document.querySelector('#carouselExampleControls')
@@ -221,7 +250,6 @@
                 carousel.pause();
                 quit = true;
             }
-
         });
         return quit;
     }
