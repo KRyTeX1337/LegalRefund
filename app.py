@@ -19,11 +19,6 @@ def home():
     return render_template("index.html")
 
 
-@app.route("/features")
-def view_features():
-    return render_template("features.html", title="Features")
-
-
 @app.route("/fragebogen")
 def view_fragebogen():
     return render_template("fragebogen.html", title="Fragebogen")
@@ -32,6 +27,11 @@ def view_fragebogen():
 @app.route("/formular")
 def view_formular():
     return render_template("formular.html", title="Formular")
+
+
+@app.route("/features")
+def view_features():
+    return render_template("features.html", title="Features")
 
 
 @app.route("/pricing")
