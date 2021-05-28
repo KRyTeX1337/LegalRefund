@@ -1,10 +1,22 @@
+import os
 import main
 import json
 import Questions
 
 from flask import Flask, render_template, request
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+mail = Mail(app)
+
+app.config['MAIL_SERVER'] = 'smtp.office365.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = 'legalrefund@outlook.com'
+app.config['MAIL_PASSWORD'] = 'campus09'
+mail = Mail(app)
+
 
 
 def ComplexHandler(Obj):
@@ -16,7 +28,7 @@ def ComplexHandler(Obj):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html", title="Home")
 
 
 @app.route("/fragebogen")
@@ -27,6 +39,15 @@ def view_fragebogen():
 @app.route("/formular")
 def view_formular():
     return render_template("formular.html", title="Formular")
+
+
+@app.route("/sendmail", methods=['POST'])
+def sendmail():
+    msg = Message('Verbraucherproblem-Anfrage', sender='legalrefund@outlook.com', recipients=['legalrefund@outlook.com'])
+    userInput = request.data
+    msg.body = userInput
+    mail.send(msg)
+    return render_template("sent.html", title="Sent")
 
 
 @app.route("/features")

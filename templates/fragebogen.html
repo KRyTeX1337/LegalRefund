@@ -15,7 +15,7 @@
 <section class="msger">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('home') }}">
-            <img src="/static/img/logo.png" alt="" width="250" height="55">
+            <img src="/static/img/Logo.png" alt="" width="250" height="55">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,12 +66,91 @@
                             </button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </main>
-    <!--TODO-->
+
+    <p class="text-center mt-3">*Das häufige Auswählen von "Ich weiß es nicht" führt zu einem ungenauen/keinem
+        Ergebnis!</p>
+
+    <br>
+
+    <h3 class="text-center mb-3 mt-5">Begriffserklärungen:</h3>
+
+    <table class="table">
+        <thead class="thead text-white" style="background-color: slategray">
+        <tr>
+            <th scope="col">Begriff</th>
+            <th scope="col">Erklärung</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Verbraucher*in</th>
+            <td>Eine Person, die ein Rechtsgeschäft nicht abschließt, um ein Unternehmen zu betreiben.</td>
+        </tr>
+        <tr>
+            <th scope="row">Unternehmer*in</th>
+            <td>Eine Person, die ein Rechtsgeschäft abschließt, um ein Unternehmen zu betreiben.</td>
+        </tr>
+        <tr>
+            <th scope="row">Kauf:</th>
+            <td>Zumindest zwei Personen sind sich einig, dass die Ware das Eigentum der Käufers/der Käuferin werden
+                soll.
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Rücktrittsrecht nach dem Fern- und Auswärtsgeschäfte-Gesetz:</th>
+            <td>Innerhalb einer Frist von 14 Tagen können Verbraucher*innen einen Vertrag mit einem/r Unternehmer*in als
+                ungültig erklären, ohne diese Entscheidung begründen zu müssen.
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Online-Shop:</th>
+            <td>Es handelt sich um ein organisiertes System, über das Waren im Internet angeboten zum Kauf angeboten
+                werden. zB.: thalia.de, shop.billa.at
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Anwesenheit:</th>
+            <td>Unternehmer*in und Verbraucher*in befinden sich physisch gleichzeitig an demselben Ort.</td>
+        </tr>
+        <tr>
+            <th scope="row">Frist:</th>
+            <td>Innerhalb einer bestimmten Zeitspanne kann eine Handlung vorgenommen werden.</td>
+        </tr>
+        <tr>
+            <th scope="row">Lieferung/Abholstation:</th>
+            <td>Die Ware wird dort zugestellt, sobald sie von Ihnen entgegengenommen oder an einem Ort abgegeben wurde,
+                an dem auch sonst Ihre bestellte Ware geliefert bekommen. zB.: Ihre Lieblingsnachbarn, die Post-Filiale
+                um die Ecke.
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">§11 Fern- und Auswärtsgeschäfte-Gesetz:</th>
+            <td>§11 des FAGG regelt das Rücktrittsrecht und die Rücktrittsfrist. Nähere Informationen finden Sie <a
+                    style="color: #427898" href="https://www.ris.bka.gv.at/eli/bgbl/i/2014/33/P11/NOR40162337">hier!</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">§1 Konsumentenschutzgesetz:</th>
+            <td>§1 des KSchG regelt den Geltungsbereich bei Verträgen zwischen Unternehmern und Verbrauchern. Nähere
+                Informationen finden Sie <a style="color: #427898"
+                                            href="https://www.ris.bka.gv.at/eli/bgbl/1979/140/P1/NOR12041200">hier!</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">§3 Z 2 Fern- und Auswärtsgeschäfte-Gesetz:</th>
+            <td>§3 Z 2 im FAGG regelt wie der Vertrag zu Stande gekommen ist. Nähere Informationen finden Sie <a
+                    style="color: #427898"
+                    href="https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20008847&FassungVom=2021-05-28&Artikel=&Paragraf=3&Anlage=&Uebergangsrecht=">hier!</a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+
     <form class="msger-inputarea"></form>
 </div>
 
@@ -120,7 +199,6 @@
                     //buttonYes.setAttribute("data-slide","next");
                     buttonYes.setAttribute("id", "yes");
                     buttonYes.innerText = questionObject.right;
-                    //TODO: Assign onclick event handler
                     buttonYes.addEventListener("click", function () {
                         saveAnswer(index, this);
                         sendAnswers(index)
@@ -138,7 +216,6 @@
                     //buttonNo.setAttribute("data-slide","next");
                     buttonNo.setAttribute("id", "no");
                     buttonNo.innerText = questionObject.wrong;
-                    //TODO: Assign onclick event handler
                     buttonNo.addEventListener("click", function () {
                         saveAnswer(index, this);
                         buttonNo.disabled = true;
@@ -153,7 +230,7 @@
                     lawtext.setAttribute("id", ("law" + index))
                     divCarousel.appendChild((lawtext))
                     let nextButton = document.createElement("button")
-                    nextButton.className = "btn btn-info w-100 mb-2"
+                    nextButton.className = "btn btn-secondary w-100 mb-2"
                     nextButton.addEventListener("click", function () {
                         let myCarousel = document.querySelector('#carouselExampleControls')
                         let carousel = new bootstrap.Carousel(myCarousel);
@@ -166,7 +243,7 @@
                     divCarousel.appendChild(nextButton)
                     start.appendChild(divCarousel);
                     let nextButton2 = document.createElement("button")
-                    nextButton2.className = "btn btn-secondary w-100"
+                    nextButton2.className = "btn btn-info w-100"
                     nextButton2.addEventListener("click", function () {
                         let myCarousel = document.querySelector('#carouselExampleControls')
                         let carousel = new bootstrap.Carousel(myCarousel);
