@@ -41,11 +41,11 @@ def view_formular():
     return render_template("formular.html", title="Formular")
 
 
-@app.route("/sendmail", methods=['POST'])
-def sendmail():
+@app.route("/formular_sendmail", methods=['POST'])
+def formular_sendmail():
     msg = Message('Verbraucherproblem-Anfrage', sender='legalrefund@outlook.com', recipients=['legalrefund@outlook.com'])
-    userInput = request.data
-    msg.body = userInput
+    formdata = request.data
+    msg.body = formdata
     mail.send(msg)
     return render_template("sent.html", title="Sent")
 
@@ -59,6 +59,13 @@ def view_features():
 def view_pricing():
     return render_template("pricing.html", title="Pricing")
 
+@app.route("/pricing_sendmail", methods=['POST'])
+def pricing_sendmail():
+    msg = Message('Pricing-Anfrage', sender='legalrefund@outlook.com', recipients=['legalrefund@outlook.com'])
+    formdata = request.data
+    msg.body = formdata
+    mail.send(msg)
+    return render_template("sent.html", title="Sent")
 
 @app.route("/agb")
 def view_agb():

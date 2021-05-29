@@ -51,20 +51,20 @@
             <h3 style="text-align: center">Ihr Verbraucherproblem:</h3>
             <div class="card-body" style="background: white">
                 <div class="container">
-                    <form id="contact-form" role="form" method="POST" action="/sendmail" enctype="text/plain">
+                    <form id="contact-form" role="form" method="POST" action="/formular_sendmail" enctype="text/plain">
                         <div class="controls">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group"><label class="font-weight-bold"
                                                                    for="form_name">Vorname</label> <input
-                                            id="form_name" type="text" name="name" class="form-control"
+                                            id="form_name" type="text" name="Vorname" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Vorname wird benötigt."></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group"><label class="font-weight-bold"
                                                                    for="form_lastname">Nachname</label> <input
-                                            id="form_lastname" type="text" name="surname" class="form-control"
+                                            id="form_lastname" type="text" name="Nachname" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Nachname wird benötigt."></div>
                                 </div>
@@ -73,17 +73,17 @@
                                 <div class="col-md-12">
                                     <div class="form-group"><label class="font-weight-bold" for="form_email">Email
                                         Addresse</label> <input
-                                            id="form_email" type="email" name="email" class="form-control"
+                                            id="form_email" type="E-Mail" name="email" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Valide Email Addresse wird benötigt."></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group"><label class="font-weight-bold" for="country">Das
+                                    <div class="form-group"><label class="font-weight-bold" for="Land">Das
                                         Unternehmen hat ein Sitz
                                         in...?</label>
-                                        <select id="country" name="country" class="form-control"
+                                        <select id="country" name="Land" class="form-control"
                                                 required="required"
                                                 data-error="Das Unternehmen hat ein Sitz in...?">
                                             <option value="" selected disabled>--Land auswählen--</option>
@@ -126,18 +126,18 @@
                                         in...?</label>
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="firmensitz"
+                                            <input class="form-check-input" type="radio" name="Firmensitz"
                                                    id="firmensitz"
                                                    value="Online">
                                             <label class="form-check-label" for="firmensitz">Online</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="firmensitz"
+                                            <input class="form-check-input" type="radio" name="Firmensitz"
                                                    id="firmensitz"
                                                    value="Nicht online (im
                                                 Geschäft,
                                                 an der Haustür, über den Versandhandel)">
-                                            <label class="form-check-label" for="firmensitz">Nicht online (im
+                                            <label class="form-check-label" for="Firmensitz">Nicht online (im
                                                 Geschäft,
                                                 an der Haustür, über den Versandhandel)</label>
                                         </div>
@@ -151,7 +151,7 @@
                                             Folgendes
                                             unternommen:
                                             (Kreuzen Sie alle zutreffenden Antworten an.)</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                        <select multiple class="form-control" id="Unternommen" name="Unternommen">
                                             <option>Kontaktaufnahme mit dem Verkäufer</option>
                                             <option>Einschaltung einer Streitbeteiligungsstelle</option>
                                             <option>Gerichtsverfahren</option>
@@ -167,7 +167,7 @@
                                             Problem
                                             geht es um:
                                             (Kreuzen Sie alle zutreffenden Antworten an.)</label>
-                                        <select multiple class="form-control" id="exampleFormControlSelect3">
+                                        <select multiple class="form-control" id="Problem" name="Problem">
                                             <option>Finanzdienstleistungen (Hypotheken, Versicherungen, Bankgeschäfte
                                                 usw.)
                                             </option>
@@ -184,14 +184,15 @@
                                     <div class="form-group"><label class="font-weight-bold" for="form_message">Ihre
                                         detailierte Beschreibung</label>
                                         <textarea
-                                                id="form_message" name="message" class="form-control"
+                                                id="form_message" name="Beschreibung" class="form-control"
                                                 placeholder="" rows="4" required="required"
                                                 data-error="Ihr Problem"></textarea></div>
                                 </div>
-                                <div id="success" class="col-md-12"><button type="sumbit"
-                                                                           class="btn btn-success btn-send pt-2 btn-block "
-                                                                           value="submit"
-                                >Absenden</button>
+                                <div id="success" class="col-md-12">
+                                    <button type="sumbit"
+                                            class="btn btn-success btn-send pt-2 btn-block "
+                                            value="submit">Absenden
+                                    </button>
                                 </div>
                             </div>
                         </div>

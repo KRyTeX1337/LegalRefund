@@ -91,18 +91,18 @@
             <h3 style="text-align: center">Senden Sie uns Ihre Anfrage!</h3>
             <div class="card-body" style="background: white">
                 <div class="container">
-                    <form id="contact-form" role="form">
+                    <form id="contact-form" role="form" method="POST" action="/pricing_sendmail" enctype="text/plain">
                         <div class="controls">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group"><label for="form_name">Vorname</label> <input
-                                            id="form_name" type="text" name="name" class="form-control"
+                                            id="form_name" type="text" name="Vorname" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Vorname wird benötigt."></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group"><label for="form_lastname">Nachname</label> <input
-                                            id="form_lastname" type="text" name="surname" class="form-control"
+                                            id="form_lastname" type="text" name="Nachname" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Nachname wird benötigt."></div>
                                 </div>
@@ -110,7 +110,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group"><label for="form_email">Email Addresse</label> <input
-                                            id="form_email" type="email" name="email" class="form-control"
+                                            id="form_email" type="email" name="E-Mail" class="form-control"
                                             placeholder="" required="required"
                                             data-error="Valide Email Addresse wird benötigt."></div>
                                 </div>
@@ -118,7 +118,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group"><label for="form_need">Was wollen Sie Anfragen?</label>
-                                        <select id="form_need" name="need" class="form-control"
+                                        <select id="form_need" name="Anfrage" class="form-control"
                                                 required="required"
                                                 data-error="Was wollen Sie Anfragen?">
                                             <option value="" selected disabled>--Wählen Sie aus--</option>
@@ -131,16 +131,16 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group"><label for="form_message">Ihre Nachricht</label> <textarea
-                                            id="form_message" name="message" class="form-control"
+                                            id="form_message" name="Nachricht" class="form-control"
                                             placeholder="" rows="4" required="required"
                                             data-error="Geben Sie Ihre Nachricht ein!"></textarea></div>
                                 </div>
-                                <div id="success" class="col-md-12"><input type="sumbit"
-                                                                           class="btn btn-success btn-send pt-2 btn-block "
-                                                                           value="Nachricht absenden"
-                                                                           onclick=window.location.reload();></div>
+                                <div id="success" class="col-md-12">
+                                    <button type="sumbit"
+                                            class="btn btn-success btn-send pt-2 btn-block "
+                                            value="submit">Absenden</button>
+                                </div>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
