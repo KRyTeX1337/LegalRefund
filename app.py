@@ -67,10 +67,14 @@ def pricing_sendmail():
     mail.send(msg)
     return render_template("sent.html", title="Sent")
 
-@app.route("/agb")
-def view_agb():
-    return render_template("agb.html", title="AGB")
+@app.route("/nb")
+def view_nb():
+    return render_template("nb.html", title="Nutzungsbedingung")
 
+
+@app.route("/de")
+def view_de():
+    return render_template("de.html", title="Datenschutzerklärung")
 
 @app.route("/impressum")
 def view_impressum():

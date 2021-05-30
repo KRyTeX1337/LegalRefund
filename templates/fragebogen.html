@@ -36,7 +36,10 @@
                     <a class="nav-link" href="{{ url_for('view_pricing') }}">Pricing</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('view_agb') }}">AGB</a>
+                    <a class="nav-link" href="{{ url_for('view_nb') }}">Nutzungsbedingung</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_de') }}">Datenschutzerklärung</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('view_impressum') }}">Impressum</a>
@@ -47,6 +50,7 @@
 </section>
 <img class="img-fluid" src="/static/img/fragebogen.png">
 <div class="content container">
+    <h3 class="text-center mb-3 mt-5">Willkommen zu unserem Expert-System!</h3>
     <main class="msger-chat">
         <div id="carouselExampleControls" class="carousel slide shadow p-5 mb-6 bg-white rounded"
              data-interval="false">
@@ -56,7 +60,7 @@
                         <input class="form-check-input" type="checkbox" data-slide="next" role="button"
                                href="#carouselExampleControls">
                         <label class="form-check-label" for="flexCheckDefault">Hiermit bestätige ich, dass ich die
-                            Datenschutzerklärung akzeptiere.</label>
+                            <a style="color: #427898" href="de">Datenschutzerklärung</a> akzeptiere.</label>
                     </div>
                 </div>
             </div>

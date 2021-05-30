@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AGB</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<section class="msger">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="/static/img/Logo.png" alt="" width="250" height="55">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_fragebogen') }}">Fragebogen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_formular') }}">Formular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_features') }}">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_pricing') }}">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_nb') }}">Nutzungsbedingung</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_de') }}">Datenschutzerklärung</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('view_impressum') }}">Impressum</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</section>
+
+<div class="content container">
+    <h3>Datenschutzerklärung</h3>
+    <h4>Anwendungsbereich</h4>
+    Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und für alle
+    personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit personenbezogenen
+    Daten meinen wir Informationen wie zum Beispiel Name, E-Mail-Adresse und postalische Anschrift einer Person. Die
+    Verarbeitung personenbezogener Daten sorgt dafür, dass wir unsere Dienstleistungen und Produkte anbieten und
+    abrechnen können, sei es online oder offline. Der Anwendungsbereich dieser Datenschutzerklärung umfasst:
+    <br/>
+    <li/>
+    alle Onlineauftritte (Websites, Onlineshops), die wir betreiben
+    <li/>
+    Social Media Auftritte und E-Mail-Kommunikation
+    <li/>
+    mobile Apps für Smartphones und andere Geräte
+    <br/><br/>
+    <h4>Rechtsgrundlagen</h4>
+    In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen Grundsätzen und
+    Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns ermöglichen, personenbezogene Daten
+    zu verarbeiten. <br/>
+    Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES
+    RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich online auf EUR-Lex,
+    dem Zugang zum EU-Recht, unter <a href="https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=celex%3A32016R0679">https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=celex%3A32016R0679</a>
+    nachlesen.
+    <br/><br/>
+    Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:
+    <br/><br/>
+    <br>
+    <li/>
+    <strong>Einwilligung</strong> (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben, Daten zu
+    einem
+    bestimmten
+    Zweck zu verarbeiten. Ein Beispiel wäre die Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.
+    <li/>
+    <strong>Vertrag</strong> (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche Verpflichtungen
+    mit Ihnen zu
+    erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen
+    wir vorab personenbezogene Informationen.
+    <li/>
+    <strong>Rechtliche Verpflichtung</strong> (Artikel 6 Absatz 1 lit. c DSGVO): Wenn wir einer rechtlichen
+    Verpflichtung
+    unterliegen, verarbeiten wir Ihre Daten. Zum Beispiel sind wir gesetzlich verpflichtet Rechnungen für die
+    Buchhaltung
+    aufzuheben. Diese enthalten in der Regel personenbezogene Daten.
+    <li/>
+    <strong>Berechtigte Interessen</strong> (Artikel 6 Absatz 1 lit. f DSGVO): Im Falle berechtigter Interessen, die
+    Ihre Grundrechte
+    nicht einschränken, behalten wir uns die Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel
+    gewisse
+    Daten verarbeiten, um unsere Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung
+    ist
+    somit ein berechtigtes Interesse.
+    </ol>
+    Weitere Bedingungen wie die Wahrnehmung von Aufnahmen im öffentlichen Interesse und Ausübung öffentlicher Gewalt
+    sowie dem Schutz lebenswichtiger Interessen treten bei uns in der Regel nicht auf. Soweit eine solche
+    Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.
+    <br/><br/>
+    <li/>
+    In Österreich ist dies das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten
+    (Datenschutzgesetz), kurz DSG.
+    <br/><br/>
+    <h4>Kontaktdaten des Verantwortlichen</h4>
+    Sollten Sie Fragen zum Datenschutz haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw.
+    Stelle.
+    <br/><br/>
+    <p>
+        LegalRefund KG<br>
+        <b>Address:</b> Favoritenstraße 226, 1100 Wien<br>
+        <b>E-Mail:</b> legalrefund@outlook.com<br>
+        <b>Telefon:</b> +43 660 647 8185<br>
+        <b>FBNummer:</b> FN623512<br>
+        <b>Umsatzsteuer-Identifikationsnummer:</b> ATU12345678
+    </p>
+    <h4>Speicherdauer</h4>
+    Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer Dienstleistungen und
+    Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Wenn es zum Beispiel im Fall von
+    Buchhaltung gesetzlich vorgeschrieben ist, kann diese Speicherdauer auch überschritten werden. Das bedeutet, dass
+    wir personenbezogene Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr vorhanden ist. Sollten Sie
+    die Löschung Ihrer Daten wünschen oder die Einwilligung zur Datenverarbeitung widerrufen, werden die Daten so rasch
+    wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.
+    <br/><br/>
+    Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir weitere
+    Informationen dazu haben.
+    <br/><br/>
+    <h4>Rechte laut Datenschutzgrundverordnung</h4>
+    Laut Artikel 13 DSGVO stehen Ihnen die folgenden Rechte zu, damit es zu einer fairen und transparenten Verarbeitung
+    von Daten kommt:
+    <br/><br/>
+    <li/>
+    Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten von Ihnen verarbeiten. Sollte das
+    zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und die folgenden Informationen zu erfahren:
+    zu welchem Zweck wir die Verarbeitung durchführen;
+    die Kategorien, also die Arten von Daten, die verarbeitet werden;
+    wer diese Daten erhält und wenn die Daten an Drittländer übermittelt werden, wie die Sicherheit garantiert werden
+    kann;
+    wie lange die Daten gespeichert werden;
+    das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung der Verarbeitung und dem Widerspruchsrecht
+    gegen die Verarbeitung;
+    dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu diesen Behörden finden Sie weiter unten);
+    die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;
+    ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet werden, um zu einem persönlichen Profil von
+    Ihnen zu gelangen.
+    <li/>
+    Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was bedeutet, dass wir Daten richtig stellen
+    müssen, falls Sie Fehler finden.
+    <li/>
+    Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf Vergessenwerden“), was konkret bedeutet, dass Sie
+    die Löschung Ihrer Daten verlangen dürfen.
+    <li/>
+    Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der Verarbeitung, was bedeutet, dass wir die Daten nur
+    mehr speichern dürfen aber nicht weiter verwenden.
+    <li/>
+    Sie haben laut Artikel 19 DSGVO das Recht auf Datenübertragbarkeit, was bedeutet, dass wir Ihnen auf Anfrage Ihre
+    Daten in einem gängigen Format zur Verfügung stellen.
+    <li/>
+    Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach Durchsetzung eine Änderung der Verarbeitung mit
+    sich bringt.
+    <br>
+    Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e (öffentliches Interesse, Ausübung öffentlicher Gewalt)
+    oder Artikel 6 Abs. 1 lit. f (berechtigtes Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch
+    einlegen.
+    <br>
+    Wir prüfen danach so rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.
+    <br>
+    Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung
+    widersprechen.
+    <br>
+    Wir dürfen Ihre Daten danach nicht mehr für Direktmarketing verwenden.
+    <br>
+    Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung
+    widersprechen.
+    <br>Wir dürfen Ihre Daten danach nicht mehr für Profiling verwenden.
+    <li/>
+    Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer ausschließlich auf einer automatisierten
+    Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung unterworfen zu werden.
+    Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
+    datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde
+    beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter https://www.dsb.gv.at/ finden
+    und für Deutschland können Sie sich an die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)
+    wenden.
+    <br/><br/>
+    <h4>Sicherheit der Datenverarbeitung</h4>
+    Um personenbezogene Daten zu schützen, haben wir sowohl technische als auch organisatorische Maßnahmen umgesetzt. Wo
+    es uns möglich ist, verschlüsseln oder pseudonymisieren wir personenbezogene Daten. Dadurch machen wir es im Rahmen
+    unserer Möglichkeiten so schwer wie möglich, dass Dritte aus unseren Daten auf persönliche Informationen schließen
+    können.
+    <br/><br/>
+    Art. 25 DSGVO spricht hier von “Datenschutz durch Technikgestaltung und durch datenschutzfreundliche
+    Voreinstellungen” und meint damit, dass man sowohl bei Software (z. B. Formularen) also auch Hardware (z. B. Zugang
+    zum Serverraum) immer an Sicherheit denkt und entsprechende Maßnahmen setzt. Im Folgenden gehen wir, falls
+    erforderlich, noch auf konkrete Maßnahmen ein.
+    <br/><br/>
+    Quelle: <a href="https://www.adsimple.at/">https://adsimple.at</a>
+    <br/> <br/>
+</div>
+
+</body>
+
+<!-- Footer -->
+<footer class="page-footer bg-light font-small">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+        <a href="{{ url_for('view_impressum') }}">LegalRefund</a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</html>
