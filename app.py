@@ -14,7 +14,7 @@ app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = 'legalrefund@outlook.com'
-app.config['MAIL_PASSWORD'] = 'campus09'
+app.config['MAIL_PASSWORD'] = ''
 mail = Mail(app)
 
 
